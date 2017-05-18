@@ -10,14 +10,13 @@ from objects in JS.
 ## Prerequisites
 
 -   The JavaScript Objects Series:
+    -   [ga-wdi-boston/js-reference-types](/ga-wdi-boston/js-reference-types)
+    -   [ga-wdi-boston/js-objects](/ga-wdi-boston/js-objects)
+    -   [ga-wdi-boston/js-objects-this](/ga-wdi-boston/js-objects-this)
+    -   [ga-wdi-boston/js-objects-constructors](/ga-wdi-boston/js-objects-constructors)
+    -   [ga-wdi-boston/js-objects-prototypes](/ga-wdi-boston/js-objects-prototypes)
 
-    -   [ga-wdi-boston/js-reference-types](https://github.com/ga-wdi-boston/js-reference-types)
-    -   [ga-wdi-boston/js-objects](https://github.com/ga-wdi-boston/js-objects)
-    -   [ga-wdi-boston/js-objects-this](https://github.com/ga-wdi-boston/js-objects-this)
-    -   [ga-wdi-boston/js-objects-constructors](https://github.com/ga-wdi-boston/js-objects-constructors)
-    -   [ga-wdi-boston/js-objects-prototypes](https://github.com/ga-wdi-boston/js-objects-prototypes)
-
--   [ga-wdi-boston/ruby](https://github.com/ga-wdi-boston/ruby)
+-   [ga-wdi-boston/ruby](/ga-wdi-boston/ruby)
 
 ## Objectives
 
@@ -30,7 +29,7 @@ By the end of this, developers should be able to:
 
 ## Preparation
 
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+1.  [Fork and clone](/ga-wdi-boston/meta/wiki/ForkAndClone)
     this repository.
 1.  Install dependencies with `bundle install`.
 1.  Checkout to a new branch `training`.
@@ -320,7 +319,7 @@ A = n * s * s / (4 * tangent(PI/n))
 where `n` is the number of sides, and `s` is the length of the side.
 
 To test whether or not your code is working,
-run the command `bin/rake test spec/shape_spec.rb`
+run the command `bundle exec rspec spec/person_spec.rb`
 
 **HINT:** Ruby has a [module for performing
 mathematics](http://ruby-doc.org/core-2.3.0/Math.html) called `Math`; it has a

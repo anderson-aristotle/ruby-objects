@@ -225,15 +225,6 @@ we were able to change the value of `@language` after the object was created.
 > Ruby convention is for 'getter' and 'setter' methods to be named,
 > respectively, `propertyName` and `propertyName=`
 
-Of course, parentheses are optional when you invoke a method in Ruby,
-and spaces are (usually) ignored,
-so those two invocations could be rewritten as
-
-```ruby
-england.language = "english"    # invoking the 'setter'
-puts england.language           # invoking the 'getter'
-```
-
 ### Lab : Writing Getters and Setters
 
 Go back to the `person.rb` file inside the `lib` directory.

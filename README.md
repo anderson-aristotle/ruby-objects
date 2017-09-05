@@ -22,8 +22,7 @@ from objects in JS.
 
 By the end of this, developers should be able to:
 
--   Define a class for an object in Ruby that assigns attributes in the
-    `initialize` constructor.
+-   Define a class for an object in Ruby that assigns attributes in the `initialize` constructor.
 -   Create an instance of an object in Ruby using `.new`.
 -   Write setter and getter instance methods for Ruby objects.
 
@@ -208,7 +207,7 @@ Methods defined _within_ the object have access to those properties,
 and since those methods can be (and usually are) public,
 we can create methods specifically for accessing properties.
 These methods are typically called 'getter' and 'setter' methods,
-based on whether they're use to retrieve ('get') or change ('set') properties.
+based on whether they're used to retrieve ('get') or change ('set') properties.
 
 Take a look at the code in [`lib/country.rb`](lib/country.rb)
 

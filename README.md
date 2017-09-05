@@ -148,8 +148,8 @@ Inside this repo, in the folder `lib`, you'll find a file called `person.rb`.
 In that file define a Ruby class for creating Person objects;
 every Person object should have
 
--   a given name and surname
--   a favorite food
+-   a given_name and surname
+-   a favorite_food
 -   a catchphrase
 
 You can test your work using `bin/rake test`.

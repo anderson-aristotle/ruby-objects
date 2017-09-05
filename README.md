@@ -223,7 +223,7 @@ However, because we had a 'setter' method,
 we were able to change the value of `@language` after the object was created.
 
 > Ruby convention is for 'getter' and 'setter' methods to be named,
-> respectively, `propertyName` and `propertyName=`
+> respectively, `property_name` and `property_name=`
 
 ### Lab : Writing Getters and Setters
 

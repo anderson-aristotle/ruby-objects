@@ -10,26 +10,25 @@ from objects in JS.
 ## Prerequisites
 
 -   The JavaScript Objects Series:
-    -   [ga-wdi-boston/js-reference-types](/ga-wdi-boston/js-reference-types)
-    -   [ga-wdi-boston/js-objects](/ga-wdi-boston/js-objects)
-    -   [ga-wdi-boston/js-objects-this](/ga-wdi-boston/js-objects-this)
-    -   [ga-wdi-boston/js-objects-constructors](/ga-wdi-boston/js-objects-constructors)
-    -   [ga-wdi-boston/js-objects-prototypes](/ga-wdi-boston/js-objects-prototypes)
+    -   [ga-wdi-boston/js-reference-types](https://git.generalassemb.ly/ga-wdi-boston/js-reference-types)
+    -   [ga-wdi-boston/js-object-modeling](https://git.generalassemb.ly/ga-wdi-boston/js-object-modeling)
+    -   [ga-wdi-boston/js-objects-this](https://git.generalassemb.ly/ga-wdi-boston/js-objects-this)
+    -   [ga-wdi-boston/js-object-constructors](https://git.generalassemb.ly/ga-wdi-boston/js-objects-constructors)
+    -   [ga-wdi-boston/js-objects-prototypes](https://git.generalassemb.ly/ga-wdi-boston/js-objects-prototypes)
 
--   [ga-wdi-boston/ruby](/ga-wdi-boston/ruby)
+-   [ga-wdi-boston/ruby](https://git.generalassemb.ly/ga-wdi-boston/ruby)
 
 ## Objectives
 
 By the end of this, developers should be able to:
 
--   Define a class for an object in Ruby that assigns attributes in the
-    `initialize` constructor.
+-   Define a class for an object in Ruby that assigns attributes in the `initialize` constructor.
 -   Create an instance of an object in Ruby using `.new`.
 -   Write setter and getter instance methods for Ruby objects.
 
 ## Preparation
 
-1.  [Fork and clone](/ga-wdi-boston/meta/wiki/ForkAndClone)
+1.  [Fork and clone](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
     this repository.
 1.  Install dependencies with `bundle install`.
 1.  Checkout to a new branch `training`.
@@ -95,7 +94,11 @@ which are referred to as _instances_ of the class.
 
 Here's how we might translate the Rectangle example above into Ruby:
 
-```ruby
+<!-- start code block file="snippets/rectangle.rb" -->
+```rb
+# frozen_string_literal: true
+
+# Rectangle class
 class Rectangle
   def initialize(length, width)
     @length = length
@@ -107,13 +110,14 @@ class Rectangle
   end
 end
 
-firstRect = Rectangle.new(3,5)
-firstRect.area
+first_rect = Rectangle.new(3, 5)
+first_rect.area
 # => 15
-secondRect = Rectangle.new(10,2)
-secondRect.area
+second_rect = Rectangle.new(10, 2)
+second_rect.area
 # => 20
 ```
+<!-- end code block -->
 
 The `@` indicates that we're talking about an _instance variable_,
 a property for which each individual instance produced by the class has a
@@ -144,8 +148,8 @@ Inside this repo, in the folder `lib`, you'll find a file called `person.rb`.
 In that file define a Ruby class for creating Person objects;
 every Person object should have
 
--   a given name and surname
--   a favorite food
+-   a given_name and surname
+-   a favorite_food
 -   a catchphrase
 
 You can test your work using `bin/rake test`.
@@ -208,7 +212,7 @@ Methods defined _within_ the object have access to those properties,
 and since those methods can be (and usually are) public,
 we can create methods specifically for accessing properties.
 These methods are typically called 'getter' and 'setter' methods,
-based on whether they're use to retrieve ('get') or change ('set') properties.
+based on whether they're used to retrieve ('get') or change ('set') properties.
 
 Take a look at the code in [`lib/country.rb`](lib/country.rb)
 
@@ -219,16 +223,7 @@ However, because we had a 'setter' method,
 we were able to change the value of `@language` after the object was created.
 
 > Ruby convention is for 'getter' and 'setter' methods to be named,
-> respectively, `propertyName` and `propertyName=`
-
-Of course, parentheses are optional when you invoke a method in Ruby,
-and spaces are (usually) ignored,
-so those two invocations could be rewritten as
-
-```ruby
-england.language = "english"    # invoking the 'setter'
-puts england.language           # invoking the 'getter'
-```
+> respectively, `property_name` and `property_name=`
 
 ### Lab : Writing Getters and Setters
 
@@ -273,7 +268,11 @@ There are three `attr_` methods available for Ruby objects to use.
 
 If we wanted `@name` to be read-only, we might use `attr_reader` like so:
 
-```ruby
+<!-- start code block file="snippets/country.rb" -->
+```rb
+# frozen_string_literal: true
+
+# Country class
 class Country
   attr_accessor :language
   attr_reader :name
@@ -283,10 +282,11 @@ class Country
   end
 end
 
-england = Country.new("England")
+england = Country.new('England')
 puts england.name         # prints out "England"
-england.name = "France"   # NoMethodError: undefined method `name=' for #<Country:0x__________________ @name="England">
+england.name = 'France'   # NoMethodError: undefined method `name=' for #<Country:0x__________________ @name="England">
 ```
+<!-- end code block -->
 
 By the way, did you notice that we didn't specify `language`
 as an instance variable anywhere inside the Country class?
@@ -319,10 +319,10 @@ A = n * s * s / (4 * tangent(PI/n))
 where `n` is the number of sides, and `s` is the length of the side.
 
 To test whether or not your code is working,
-run the command `bundle exec rspec spec/person_spec.rb`
+run the command `bundle exec rspec spec/shape_spec.rb`
 
 **HINT:** Ruby has a [module for performing
-mathematics](http://ruby-doc.org/core-2.3.0/Math.html) called `Math`; it has a
+mathematics](http://ruby-doc.org/core-2.4.1/Math.html) called `Math`; it has a
 lot of useful methods and properties that can help you out here. The `Math`
 module is one of Ruby's default modules, so Ruby already knows how to find it;
 to add it to your Shape object, and gain access to those methods and

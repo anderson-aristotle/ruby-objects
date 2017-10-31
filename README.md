@@ -328,6 +328,10 @@ module is one of Ruby's default modules, so Ruby already knows how to find it;
 to add it to your Shape object, and gain access to those methods and
 properties, use the `include` keyword.
 
+## Additional Resources
+
+- [Self and Attributes](https://www.commandercoriander.net/blog/2013/02/09/self-and-attributes/)
+
 ## [License](LICENSE)
 
 1.  All content is licensed under a CC­BY­NC­SA 4.0 license.

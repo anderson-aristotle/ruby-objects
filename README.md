@@ -148,7 +148,7 @@ Inside this repo, in the folder `lib`, you'll find a file called `person.rb`.
 In that file define a Ruby class for creating Person objects;
 every Person object should have
 
--   a given_name and surname
+-   a first_name and last_name
 -   a favorite_food
 -   a catchphrase
 
@@ -169,8 +169,8 @@ and methods to it simply by calling their names, like so:
 
 ```javascript
 let hs = {}
-hs.givenName = "Homer"
-hs.surname = "Simpson"
+hs.firstName = "Homer"
+hs.lastName = "Simpson"
 hs.favoriteFood = "donuts"
 hs.catchphrase = "Doh!"
 ```

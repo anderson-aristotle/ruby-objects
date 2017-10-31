@@ -8,23 +8,23 @@ context 'Person' do
   end
 
   context 'initialized in before(:context)' do
-    describe '.given_name' do
+    describe '.first_name' do
       it 'is readable' do
-        expect(@p.given_name).to eq('Ned')
+        expect(@p.first_name).to eq('Ned')
       end
       it 'is editable' do
-        @p.given_name = 'Nedward'
-        expect(@p.given_name).to eq('Nedward')
+        @p.first_name = 'Nedward'
+        expect(@p.first_name).to eq('Nedward')
       end
     end
 
-    describe '.surname' do
+    describe '.last_name' do
       it 'is readable' do
-        expect(@p.surname).to eq('Flanders')
+        expect(@p.last_name).to eq('Flanders')
       end
       it 'is editable' do
-        @p.surname = 'Stark'
-        expect(@p.surname).to eq('Stark')
+        @p.last_name = 'Stark'
+        expect(@p.last_name).to eq('Stark')
       end
     end
 

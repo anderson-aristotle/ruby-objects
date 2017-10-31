@@ -152,7 +152,7 @@ every Person object should have
 -   a favorite_food
 -   a catchphrase
 
-You can test your work using `bin/rake test`.
+To test your work, enter the Pry REPL in your terminal. Use this command to load your file into Pry: `require_relative('lib/person.rb')`. Then create a new instance of the Person class with `Person.new`. You should pass in any arguments you need and save the new object to a variable.
 
 Then, in the root of this repo, open up a Ruby interpreter with `pry`.
 In the first line, run the command `require_relative 'lib/person.rb'`;

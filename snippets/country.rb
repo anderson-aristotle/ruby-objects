@@ -11,5 +11,8 @@ class Country
 end
 
 england = Country.new('England')
-puts england.name         # prints out "England"
-england.name = 'France'   # NoMethodError: undefined method `name=' for #<Country:0x__________________ @name="England">
+puts england.name
+# prints out "England"
+
+england.name = 'France'
+# NoMethodError: undefined method `name=' for #<Country:0x@name="England">

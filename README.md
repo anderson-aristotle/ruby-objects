@@ -148,11 +148,11 @@ Inside this repo, in the folder `lib`, you'll find a file called `person.rb`.
 In that file define a Ruby class for creating Person objects;
 every Person object should have
 
--   a given_name and surname
+-   a first_name and last_name
 -   a favorite_food
 -   a catchphrase
 
-You can test your work using `bin/rake test`.
+To test your work, enter the Pry REPL in your terminal. Use this command to load your file into Pry: `require_relative('lib/person.rb')`. Then create a new instance of the Person class with `Person.new`. You should pass in any arguments you need and save the new object to a variable.
 
 Then, in the root of this repo, open up a Ruby interpreter with `pry`.
 In the first line, run the command `require_relative 'lib/person.rb'`;
@@ -169,8 +169,8 @@ and methods to it simply by calling their names, like so:
 
 ```javascript
 let hs = {}
-hs.givenName = "Homer"
-hs.surname = "Simpson"
+hs.firstName = "Homer"
+hs.lastName = "Simpson"
 hs.favoriteFood = "donuts"
 hs.catchphrase = "Doh!"
 ```
@@ -327,6 +327,10 @@ lot of useful methods and properties that can help you out here. The `Math`
 module is one of Ruby's default modules, so Ruby already knows how to find it;
 to add it to your Shape object, and gain access to those methods and
 properties, use the `include` keyword.
+
+## Additional Resources
+
+- [Self and Attributes](https://www.commandercoriander.net/blog/2013/02/09/self-and-attributes/)
 
 ## [License](LICENSE)
 

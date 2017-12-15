@@ -303,7 +303,7 @@ In the `lib/shape.rb` file, use `bin/rake test` to check your work and define a 
 -   `side_length` : set during instantiation, readable and writeable.
 -   `color` : NOT set during instantiation, readable and writeable.
 
-The initalize method should have the following signature:
+The initialize method should have the following signature:
 `Shape.new(num_sides, side_length)`
 
 The class should also have an instance method called `calculate_area`,

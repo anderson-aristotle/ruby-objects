@@ -9,13 +9,7 @@ from objects in JS.
 
 ## Prerequisites
 
--   The JavaScript Objects Series:
-    -   [ga-wdi-boston/js-reference-types](https://git.generalassemb.ly/ga-wdi-boston/js-reference-types)
-    -   [ga-wdi-boston/js-object-modeling](https://git.generalassemb.ly/ga-wdi-boston/js-object-modeling)
-    -   [ga-wdi-boston/js-objects-this](https://git.generalassemb.ly/ga-wdi-boston/js-objects-this)
-    -   [ga-wdi-boston/js-object-constructors](https://git.generalassemb.ly/ga-wdi-boston/js-objects-constructors)
-    -   [ga-wdi-boston/js-objects-prototypes](https://git.generalassemb.ly/ga-wdi-boston/js-objects-prototypes)
-
+-   Basic knowledge of Javscript objects.
 -   [ga-wdi-boston/ruby](https://git.generalassemb.ly/ga-wdi-boston/ruby)
 
 ## Objectives

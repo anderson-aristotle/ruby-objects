@@ -4,18 +4,19 @@
 class Country
   def initialize(name)
     @name = name
-    @language
   end
 
   def name
     @name
   end
 
-  def language         # 'getter' for @language
+  # 'getter' for @language
+  def language
     @language
   end
 
-  def language=(lang)  # 'setter' for @language
+  # 'setter' for @language
+  def language=(lang)
     @language = lang
   end
 end

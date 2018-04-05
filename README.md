@@ -9,13 +9,7 @@ from objects in JS.
 
 ## Prerequisites
 
--   The JavaScript Objects Series:
-    -   [ga-wdi-boston/js-reference-types](https://git.generalassemb.ly/ga-wdi-boston/js-reference-types)
-    -   [ga-wdi-boston/js-object-modeling](https://git.generalassemb.ly/ga-wdi-boston/js-object-modeling)
-    -   [ga-wdi-boston/js-objects-this](https://git.generalassemb.ly/ga-wdi-boston/js-objects-this)
-    -   [ga-wdi-boston/js-object-constructors](https://git.generalassemb.ly/ga-wdi-boston/js-objects-constructors)
-    -   [ga-wdi-boston/js-objects-prototypes](https://git.generalassemb.ly/ga-wdi-boston/js-objects-prototypes)
-
+-   Basic knowledge of Javscript objects.
 -   [ga-wdi-boston/ruby](https://git.generalassemb.ly/ga-wdi-boston/ruby)
 
 ## Objectives
@@ -152,16 +146,16 @@ every Person object should have
 -   a favorite_food
 -   a catchphrase
 
-To test your work, enter the Pry REPL in your terminal. Use this command to load your file into Pry: `require_relative('lib/person.rb')`. Then create a new instance of the Person class with `Person.new`. You should pass in any arguments you need and save the new object to a variable.
+To test your work, enter the Ruby REPL in your terminal. Use this command to load your file into the REPL: `require_relative('lib/person.rb')`. Then create a new instance of the Person class with `Person.new`. You should pass in any arguments you need and save the new object to a variable.
 
-Then, in the root of this repo, open up a Ruby interpreter with `pry`.
-In the first line, run the command `require_relative 'lib/person.rb'`;
-this will load the contents of the entire `person.rb` file into the terminal,
-as if we had manually entered them one by one into the console.
+Then, try using `binding.pry` to interact with your new person object in the pry debugger: 
+At the end of the file, place `binding.pry` followed by a line that just has a set of empty quotes
+(because `binding.pry` doesn't like being the last thing in the file).
 
-Finally, instantiate a person object using `.new` and store it inside a
-variable. What do you see in the console?
+In the root of this repo, run the file with the ruby interpreter: 'ruby lib/person.rb'; this will run the file and
+stop execution when the breakpoint is reached. The entire file will be loaded and you will have access to whatever is defined in the file, up to the breakpoint. 
 
+Finally, instantiate a person object using .new and store it inside a variable. What do you see in the console? Exit the pry debugger by typing `continue`.
 ## Object Mutability
 
 In JavaScript, once we'd created an object, we could dynamically add properties

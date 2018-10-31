@@ -9,23 +9,24 @@ from objects in JS.
 
 ## Prerequisites
 
--   Basic knowledge of Javscript objects.
--   [ga-wdi-boston/ruby](https://git.generalassemb.ly/ga-wdi-boston/ruby)
+- Basic knowledge of Javascript objects.
+- [ga-wdi-boston/ruby](https://git.generalassemb.ly/ga-wdi-boston/ruby)
 
 ## Objectives
 
 By the end of this, developers should be able to:
 
--   Define a class for an object in Ruby that assigns attributes in the `initialize` constructor.
--   Create an instance of an object in Ruby using `.new`.
--   Write setter and getter instance methods for Ruby objects.
+- Define a class for an object in Ruby that assigns attributes in the
+  `initialize` constructor.
+- Create an instance of an object in Ruby using `.new`.
+- Write setter and getter instance methods for Ruby objects.
 
 ## Preparation
 
-1.  [Fork and clone](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
+1. [Fork and clone](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
     this repository.
-1.  Install dependencies with `bundle install`.
-1.  Checkout to a new branch `training`.
+1. Install dependencies with `bundle install`.
+1. Checkout to a new branch `training`.
 
 ## Introduction
 
@@ -89,6 +90,7 @@ which are referred to as _instances_ of the class.
 Here's how we might translate the Rectangle example above into Ruby:
 
 <!-- start code block file="snippets/rectangle.rb" -->
+
 ```rb
 # frozen_string_literal: true
 
@@ -111,6 +113,7 @@ second_rect = Rectangle.new(10, 2)
 second_rect.area
 # => 20
 ```
+
 <!-- end code block -->
 
 The `@` indicates that we're talking about an _instance variable_,
@@ -142,20 +145,30 @@ Inside this repo, in the folder `lib`, you'll find a file called `person.rb`.
 In that file define a Ruby class for creating Person objects;
 every Person object should have
 
--   a first_name and last_name
--   a favorite_food
--   a catchphrase
+- a first_name and last_name
+- a favorite_food
+- a catchphrase
 
-To test your work, enter the Ruby REPL in your terminal. Use this command to load your file into the REPL: `require_relative('lib/person.rb')`. Then create a new instance of the Person class with `Person.new`. You should pass in any arguments you need and save the new object to a variable.
+To test your work, enter the Ruby REPL in your terminal. Use this command to
+load your file into the REPL: `require_relative('lib/person.rb')`. Then create a
+new instance of the Person class with `Person.new`. You should pass in any
+arguments you need and save the new object to a variable.
 
-Then, try using `binding.pry` to interact with your new person object in the pry debugger: 
-At the end of the file, place `binding.pry` followed by a line that just has a set of empty quotes
-(because `binding.pry` doesn't like being the last thing in the file).
+Then, try using `binding.pry` to interact with your new person object in the pry
+debugger:
+At the end of the file, place `binding.pry` followed by a line that just has a
+set of empty quotes (because `binding.pry` doesn't like being the last thing in
+the file).
 
-In the root of this repo, run the file with the ruby interpreter: 'ruby lib/person.rb'; this will run the file and
-stop execution when the breakpoint is reached. The entire file will be loaded and you will have access to whatever is defined in the file, up to the breakpoint. 
+In the root of this repo, run the file with the ruby interpreter:
+'ruby lib/person.rb'; this will run the file and
+stop execution when the breakpoint is reached. The entire file will be loaded
+and you will have access to whatever is defined in the file, up to the
+breakpoint.
 
-Finally, instantiate a person object using .new and store it inside a variable. What do you see in the console? Exit the pry debugger by typing `continue`.
+Finally, instantiate a person object using .new and store it inside a variable.
+What do you see in the console? Exit the pry debugger by typing `continue`.
+
 ## Object Mutability
 
 In JavaScript, once we'd created an object, we could dynamically add properties
@@ -184,7 +197,7 @@ will be created when that object is instantiated.
 ## Accessing Properties and Methods
 
 In JavaScript, all properties and methods on an object are (by default) both
-publicly readable and writeable. This means that we can do things like this:
+publicly readable and writable. This means that we can do things like this:
 
 ```javascript
 const Country = function (name){
@@ -263,6 +276,7 @@ There are three `attr_` methods available for Ruby objects to use.
 If we wanted `@name` to be read-only, we might use `attr_reader` like so:
 
 <!-- start code block file="snippets/country.rb" -->
+
 ```rb
 # frozen_string_literal: true
 
@@ -278,8 +292,10 @@ end
 
 england = Country.new('England')
 puts england.name         # prints out "England"
-england.name = 'France'   # NoMethodError: undefined method `name=' for #<Country:0x__________________ @name="England">
+england.name = 'France'   # NoMethodError: undefined method `name=' for
+                          # <Country:0x__________________ @name="England">
 ```
+
 <!-- end code block -->
 
 By the way, did you notice that we didn't specify `language`
@@ -291,11 +307,12 @@ they will automatically create an instance variable
 
 #### Lab: Creating a 'Shape' Class
 
-In the `lib/shape.rb` file, use `bin/rake test` to check your work and define a Shape class with the following instance variables:
+In the `lib/shape.rb` file, use `bin/rake test` to check your work and define a
+Shape class with the following instance variables:
 
--   `num_sides` : set during instantiation, read-only.
--   `side_length` : set during instantiation, readable and writeable.
--   `color` : NOT set during instantiation, readable and writeable.
+- `num_sides` : set during instantiation, read-only.
+- `side_length` : set during instantiation, readable and writable.
+- `color` : NOT set during instantiation, readable and writable.
 
 The initialize method should have the following signature:
 `Shape.new(num_sides, side_length)`
@@ -328,6 +345,6 @@ properties, use the `include` keyword.
 
 ## [License](LICENSE)
 
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+1. All content is licensed under a CC­BY­NC­SA 4.0 license.
+1. All software code is licensed under GNU GPLv3. For commercial use or
+   alternative licensing, please contact legal@ga.co.

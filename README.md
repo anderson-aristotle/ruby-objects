@@ -33,9 +33,8 @@ By the end of this, developers should be able to:
 Why does the word 'object' refer to two kinds of different things, depending on
 whether we're talking about Ruby or JavaScript? The answer is that 'object' is
 actually a much more generic term, referring to an abstraction that represents
-both data and behavior. In the case of
-object-oriented programming languages like JavaScript and Ruby, 'object' means
-a self-contained collection of properties and methods.
+both data and behavior. In the case of object-oriented programming languages
+'object' means a self-contained collection of properties and methods.
 
 At the end of the day, an object is just a conceit for the programmer.
 The physical world is composed of objects (e.g. cars, buildings) which each have
@@ -59,9 +58,8 @@ as follows:
 let x = new Object()
 ```
 
-To create an object that has some particular set of properties,
-you can write your own constructor function.
-To add methods for those new objects to call,
+To create an object that has some particular set of properties, you can write
+your own constructor function. To add methods for those new objects to call,
 define them on that constructor's `prototype`.
 
 ```javascript
@@ -89,8 +87,6 @@ which are referred to as _instances_ of the class.
 
 Here's how we might translate the Rectangle example above into Ruby:
 
-<!-- start code block file="snippets/rectangle.rb" -->
-
 ```rb
 # frozen_string_literal: true
 
@@ -114,8 +110,6 @@ second_rect.area
 # => 20
 ```
 
-<!-- end code block -->
-
 The `@` indicates that we're talking about an _instance variable_,
 a property for which each individual instance produced by the class has a
 unique copy.
@@ -129,12 +123,14 @@ and so are called _instance methods_. `.area`, above, is one example.
 `initialize`, however, is a special case. `initialize` plays a similar role to
 constructor functions in JavaScript, defining specific values for
 each instance's properties.
-As you can see above, when we create a new object in JS,
-we don't simply invoke the constructor function --
-we need to use a special keyword, `new`, in order for it to work properly.
-Similarly, in Ruby, we don't invoke `initialize` directly,
-but instead invoke a special method, `.new`,
-directly on the class we want to instantiate (in this case, `Rectangle`).
+
+As you can see above, when we create a new object in JS, we don't simply invoke
+the constructor function -- we need to use a special keyword, `new`, in order
+for it to work properly.
+
+Similarly, in Ruby, we don't invoke `initialize` directly, but instead invoke a
+special method, `.new`, directly on the class we want to instantiate (in this
+case, `Rectangle`).
 
 > Because there is no such thing as an 'Object Literal' in Ruby,
 > all new objects _must_ be created using `.new`
@@ -242,7 +238,7 @@ so that those properties can be manipulated after the object is instantiated.
 **Note**: Create both a 'getter' and 'setter' for one property at a time.
 
 To check that your code is working correctly,
-go to the root of the repo and run `bin/rake test spec/person_spec.rb`;
+go to the root of the repo and run `bundle exec rspec spec/person_spec.rb`;
 if all tests are passing, you've done it right!
 
 ### Code-Along: Helper Methods for Accessing Properties
@@ -258,8 +254,10 @@ And in fact, the developers of Ruby built in a couple of helper methods
 for just this purpose.
 
 There are linter errors in [`lib/country.rb`](lib/country.rb).  Lets fix them
-using `attr_reader` and `attr_writer`. Use `bin/rake test` to prove that these
-methods are working the same way the previous methods did.
+using `attr_reader` and `attr_writer`.
+
+Use `bundle exec rspec spec/country_spec.rb` to prove that these methods are
+working the same way the previous methods did.
 
 The Ruby method `attr_accessor` takes a symbol as an input and
 creates 'getter' and 'setter' methods with that symbol as their name.
@@ -274,8 +272,6 @@ There are three `attr_` methods available for Ruby objects to use.
 | `attr_writer`   | 'setter' only         | Rarely used. Uncommon use case.  |
 
 If we wanted `@name` to be read-only, we might use `attr_reader` like so:
-
-<!-- start code block file="snippets/country.rb" -->
 
 ```rb
 # frozen_string_literal: true
@@ -296,8 +292,6 @@ england.name = 'France'   # NoMethodError: undefined method `name=' for
                           # <Country:0x__________________ @name="England">
 ```
 
-<!-- end code block -->
-
 By the way, did you notice that we didn't specify `language`
 as an instance variable anywhere inside the Country class?
 An added feature of all of the `attr_` methods is
@@ -307,8 +301,8 @@ they will automatically create an instance variable
 
 #### Lab: Creating a 'Shape' Class
 
-In the `lib/shape.rb` file, use `bin/rake test` to check your work and define a
-Shape class with the following instance variables:
+In the `lib/shape.rb` file, use `bundle exec rspec spec/shape_spec.rb` to check
+your work and define a Shape class with the following instance variables:
 
 - `num_sides` : set during instantiation, read-only.
 - `side_length` : set during instantiation, readable and writable.
@@ -333,7 +327,7 @@ To test whether or not your code is working,
 run the command `bundle exec rspec spec/shape_spec.rb`
 
 **HINT:** Ruby has a [module for performing
-mathematics](http://ruby-doc.org/core-2.4.1/Math.html) called `Math`; it has a
+mathematics](http://ruby-doc.org/core-2.5.0/Math.html) called `Math`; it has a
 lot of useful methods and properties that can help you out here. The `Math`
 module is one of Ruby's default modules, so Ruby already knows how to find it;
 to add it to your Shape object, and gain access to those methods and

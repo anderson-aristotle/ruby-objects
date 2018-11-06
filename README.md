@@ -58,9 +58,8 @@ as follows:
 let x = new Object()
 ```
 
-To create an object that has some particular set of properties,
-you can write your own constructor function.
-To add methods for those new objects to call,
+To create an object that has some particular set of properties, you can write
+your own constructor function. To add methods for those new objects to call,
 define them on that constructor's `prototype`.
 
 ```javascript
@@ -88,8 +87,6 @@ which are referred to as _instances_ of the class.
 
 Here's how we might translate the Rectangle example above into Ruby:
 
-<!-- start code block file="snippets/rectangle.rb" -->
-
 ```rb
 # frozen_string_literal: true
 
@@ -113,8 +110,6 @@ second_rect.area
 # => 20
 ```
 
-<!-- end code block -->
-
 The `@` indicates that we're talking about an _instance variable_,
 a property for which each individual instance produced by the class has a
 unique copy.
@@ -128,12 +123,14 @@ and so are called _instance methods_. `.area`, above, is one example.
 `initialize`, however, is a special case. `initialize` plays a similar role to
 constructor functions in JavaScript, defining specific values for
 each instance's properties.
-As you can see above, when we create a new object in JS,
-we don't simply invoke the constructor function --
-we need to use a special keyword, `new`, in order for it to work properly.
-Similarly, in Ruby, we don't invoke `initialize` directly,
-but instead invoke a special method, `.new`,
-directly on the class we want to instantiate (in this case, `Rectangle`).
+
+As you can see above, when we create a new object in JS, we don't simply invoke
+the constructor function -- we need to use a special keyword, `new`, in order
+for it to work properly.
+
+Similarly, in Ruby, we don't invoke `initialize` directly, but instead invoke a
+special method, `.new`, directly on the class we want to instantiate (in this
+case, `Rectangle`).
 
 > Because there is no such thing as an 'Object Literal' in Ruby,
 > all new objects _must_ be created using `.new`
@@ -274,8 +271,6 @@ There are three `attr_` methods available for Ruby objects to use.
 
 If we wanted `@name` to be read-only, we might use `attr_reader` like so:
 
-<!-- start code block file="snippets/country.rb" -->
-
 ```rb
 # frozen_string_literal: true
 
@@ -294,8 +289,6 @@ puts england.name         # prints out "England"
 england.name = 'France'   # NoMethodError: undefined method `name=' for
                           # <Country:0x__________________ @name="England">
 ```
-
-<!-- end code block -->
 
 By the way, did you notice that we didn't specify `language`
 as an instance variable anywhere inside the Country class?

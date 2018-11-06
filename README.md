@@ -238,7 +238,7 @@ so that those properties can be manipulated after the object is instantiated.
 **Note**: Create both a 'getter' and 'setter' for one property at a time.
 
 To check that your code is working correctly,
-go to the root of the repo and run `bin/rake test spec/person_spec.rb`;
+go to the root of the repo and run `bundle exec rspec spec/person_spec.rb`;
 if all tests are passing, you've done it right!
 
 ### Code-Along: Helper Methods for Accessing Properties
@@ -254,8 +254,10 @@ And in fact, the developers of Ruby built in a couple of helper methods
 for just this purpose.
 
 There are linter errors in [`lib/country.rb`](lib/country.rb).  Lets fix them
-using `attr_reader` and `attr_writer`. Use `bin/rake test` to prove that these
-methods are working the same way the previous methods did.
+using `attr_reader` and `attr_writer`.
+
+Use `bundle exec rspec spec/country_spec.rb` to prove that these methods are
+working the same way the previous methods did.
 
 The Ruby method `attr_accessor` takes a symbol as an input and
 creates 'getter' and 'setter' methods with that symbol as their name.
@@ -299,8 +301,8 @@ they will automatically create an instance variable
 
 #### Lab: Creating a 'Shape' Class
 
-In the `lib/shape.rb` file, use `bin/rake test` to check your work and define a
-Shape class with the following instance variables:
+In the `lib/shape.rb` file, use `bundle exec rspec spec/shape_spec.rb` to check
+your work and define a Shape class with the following instance variables:
 
 - `num_sides` : set during instantiation, read-only.
 - `side_length` : set during instantiation, readable and writable.
@@ -325,7 +327,7 @@ To test whether or not your code is working,
 run the command `bundle exec rspec spec/shape_spec.rb`
 
 **HINT:** Ruby has a [module for performing
-mathematics](http://ruby-doc.org/core-2.4.1/Math.html) called `Math`; it has a
+mathematics](http://ruby-doc.org/core-2.5.0/Math.html) called `Math`; it has a
 lot of useful methods and properties that can help you out here. The `Math`
 module is one of Ruby's default modules, so Ruby already knows how to find it;
 to add it to your Shape object, and gain access to those methods and
